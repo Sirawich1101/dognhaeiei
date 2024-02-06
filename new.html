@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>กดดูสิครับหมูอังปังหน่า</title>
+<style>
+  body {
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #message {
+    display: none;
+    font-size: 24px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
+<button id="showMessageBtn">ลองกดดูสิครับหมูอังปังหน่า</button>
+
+<div id="message"></div>
+
+<script>
+document.getElementById('showMessageBtn').addEventListener('click', function() {
+  document.getElementById('showMessageBtn').style.display = 'none';
+  document.getElementById('message').innerText = 'Bom loves Noynha very much na rak fan mak mak EiEi';
+
+  setTimeout(function() {
+    document.getElementById('message').style.display = 'block';
+    document.body.style.backgroundColor = 'lightpink';
+    createFireworksAndHearts();
+
+    setTimeout(function() {
+      document.getElementById('message').innerText = 'หมูหน่ารักบอมไหม';
+      createButtons();
+    }, 2000);
+  }, 100);
+});
+
+function createButtons() {
+  var button1 = document.createElement('button');
+  button1.innerText = 'รักบอมค้าบบบ';
+  button1.onclick = function() {
+    document.getElementById('message').innerText = 'อัยย้ะๆ';
+  };
+
+  var button2 = document.createElement('button');
+  button2.innerText = 'ไม่รักหรอกงอนแล่ว';
+  button2.onclick = function() {
+    document.getElementById('message').innerText = 'ละมึง ค ไร .';
+  };
+
+  document.body.appendChild(button1);
+  document.body.appendChild(button2);
+}
+
+function createFireworksAndHearts() {
+  // Code to create fireworks and hearts
+}
+
+setTimeout(function() {
+  document.getElementById('message').innerText = 'อูยหยอกๆ';
+}, 5000);
+</script>
+
+</body>
+</html>
